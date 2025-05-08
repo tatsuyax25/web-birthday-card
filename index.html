@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connie's Birthday Card</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="card">
@@ -12,8 +14,14 @@
     <p>Wishing you a day filled with love, joy, and all your favorite things.</p>
     <p>I love you,</p>
     <p>Miguel Urena</p>
-    <button onclick="playConfetti()">Celebrate!</button>
+    <button onclick="celebrate()">Celebrate!</button>
   </div>
+
+  <!-- Audio (auto play with interaction) -->
+  <audio id="birthdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="auto"></audio>
+
+  <!-- Canvas Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
