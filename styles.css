@@ -27,13 +27,20 @@ h1 {
   margin-bottom: 1rem;
 }
 
+/* Initial frame style and animation */
 .birthday-photo {
   display: block;
   margin: 20px auto;
   max-width: 200px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 3px solid #d291ff; /* pastel purple */
+  border: 5px solid #d291ff; /* Outer purple border */
+  padding: 5px; /* Creates space between outer and inner border */
+  background: linear-gradient(45deg, #ff8ecf, #d291ff); /* Inner pink/purple gradient border */
+  /* Animation */
+  opacity: 0; /* Start hidden */
+  transform: scale(0.8); /* Start slightly smaller */
+  animation: fadeInZoom 1.5s forwards; /* Apply animation */
 }
 
 p {
@@ -56,6 +63,24 @@ button {
 
 button:hover {
   background-color: #6b1e87; /* deeper purple */
+}
+
+/* Keyframes for fade-in and zoom-in */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Optional Hover Effect for the Image */
+.birthday-photo:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
 @keyframes fadeIn {
