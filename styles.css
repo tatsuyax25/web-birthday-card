@@ -2,8 +2,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ff9aeb, #c38bfc); /* pink to purple */
+  font-family: 'Pacifico', cursive, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,20 +22,22 @@ body {
 }
 
 h1 {
-  color: #ff69b4;
+  color: #b44cff; /* bright purple */
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
+  color: #6b1e87; /* rich purple tone */
 }
 
 button {
   margin-top: 20px;
   padding: 12px 24px;
-  background-color: #ff69b4;
+  font-size: 1rem;
+  background-color: #a044ff; /* vibrant purple */
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -44,7 +46,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff1493;
+  background-color: #6b1e87; /* deeper purple */
 }
 
 @keyframes fadeIn {
