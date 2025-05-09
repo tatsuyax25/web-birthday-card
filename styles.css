@@ -1,27 +1,35 @@
 /* This is a CSS file for styling a simple webpage */
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #ff9aeb, #c38bfc); /* pink to purple */
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to right, #ff9aeb, #c38bfc);
   font-family: 'Pacifico', cursive, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Birthday Card Container */
 .card {
   background-color: #fff;
-  padding: 2rem 3rem;
+  padding: 2rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   max-width: 400px;
-  width: 100%;
+  width: 90vw;
+  margin: 0 auto;
   animation: fadeIn 1.5s ease;
-  transition: transform 0.3s ease;
 }
 
 .card:hover {
@@ -40,18 +48,18 @@ h1 {
 .birthday-photo {
   display: block;
   margin: 20px auto;
-  max-width: 80%;
+  width: 100%;
+  max-width: 300px;
+  /* or adjust to fit */
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 5px solid #d291ff; /* Outer purple border */
-  padding: 5px; /* Creates space between outer and inner border */
-  background: linear-gradient(45deg, #ff8ecf, #d291ff); /* Inner pink/purple gradient border */
-  /* Animation */
-  opacity: 0; /* Start hidden */
-  transform: scale(0.8); /* Start slightly smaller */
-  animation: fadeInZoom 1.5s forwards; /* Apply animation */
-  transition: transform 0.3s ease; /* Smooth transition on hover */
+  border: 5px solid #d291ff;
+  padding: 5px;
+  background: linear-gradient(45deg, #ff8ecf, #d291ff);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInZoom 1.5s forwards;
+  transition: transform 0.3s ease;
 }
 
 .birthday-photo:hover {
