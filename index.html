@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connie's Birthday Card</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google Font-->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
 </head>
+
 <body>
   <div class="card">
     <h1>Happy Birthday, Connie!</h1>
 
-    <!-- Connie's photo here-->
-    <img src="Images/connie-birthday.JPG" alt="Connie" class="birthday-photo">
+    <!-- Connie's photo -->
+    <img src="Images/connie-birthday.JPG" alt="Connie smiling" class="birthday-photo" />
 
     <p>Wishing you a day filled with love, joy, and all your favorite things.</p>
     <p>I love you,</p>
@@ -21,15 +23,16 @@
     <button onclick="celebrate()">Celebrate!</button>
   </div>
 
-  <!-- Audio (auto play with interaction) -->
-  <audio id="birthdaySong"
-    src="audio/happy-birthday-220024.mp3"
-    preload="auto"></audio>
+  <!-- Background canvas for confetti -->
+  <canvas id="confetti-canvas"></canvas>
 
-
+  <!-- Audio for birthday song -->
+  <audio id="birthdaySong" src="audio/happy-birthday-220024.mp3" preload="auto"></audio>
 
   <!-- Canvas Confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Your external JS file -->
   <script src="script.js"></script>
 </body>
+
 </html>
