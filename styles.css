@@ -12,26 +12,36 @@ body {
   overflow-x: hidden;
 }
 
+/* Birthday Card Container */
 .card {
   background-color: #fff;
   padding: 2rem 3rem;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   max-width: 400px;
+  width: 100%;
   animation: fadeIn 1.5s ease;
+  transition: transform 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px); /* Slightly lift the card on hover */
+}
+
+/* Header */
 h1 {
   color: #b44cff; /* bright purple */
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  animation: fadeInZoom 1.2s ease-out;
 }
 
 /* Initial frame style and animation */
 .birthday-photo {
   display: block;
   margin: 20px auto;
-  max-width: 200px;
+  max-width: 80%;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border: 5px solid #d291ff; /* Outer purple border */
@@ -41,14 +51,21 @@ h1 {
   opacity: 0; /* Start hidden */
   transform: scale(0.8); /* Start slightly smaller */
   animation: fadeInZoom 1.5s forwards; /* Apply animation */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
 }
 
+.birthday-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Paragraph Text */
 p {
   font-size: 1.2rem;
   margin: 0.5rem 0;
   color: #6b1e87; /* rich purple tone */
 }
 
+/* Button Styling */
 button {
   margin-top: 20px;
   padding: 12px 24px;
@@ -58,11 +75,12 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
   background-color: #6b1e87; /* deeper purple */
+  transform: scale(1.05);
 }
 
 /* Keyframes for fade-in and zoom-in */
@@ -77,12 +95,6 @@ button:hover {
   }
 }
 
-/* Optional Hover Effect for the Image */
-.birthday-photo:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  transition: transform 0.3s ease; /* Smooth transition */
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -91,5 +103,30 @@ button:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .birthday-photo {
+    max-width: 100%;
+    border-width: 4px;
   }
 }
