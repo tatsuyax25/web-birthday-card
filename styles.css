@@ -68,15 +68,17 @@ h1 {
 }
 
 .birthday-photo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 25px rgba(178, 76, 255, 0.3);
 }
 
 /* Paragraph Text */
 p {
+  font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   margin: 0.5rem 0;
   color: #6b1e87;
-  /* rich purple tone */
+  font-weight: 400;
 }
 
 /* Button Styling */
@@ -95,8 +97,12 @@ button {
 
 button:hover {
   background-color: #6b1e87;
-  /* deeper purple */
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(160, 68, 255, 0.5);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 /* Keyframes for fade-in and zoom-in */
@@ -142,6 +148,8 @@ button:hover {
   button {
     width: 100%;
     font-size: 1.1rem;
+    padding: 16px 24px;
+    min-height: 48px;
   }
 
   .birthday-photo {
