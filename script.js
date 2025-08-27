@@ -3,9 +3,15 @@ function celebrate() {
   const audio = document.getElementById("birthdaySong");
   const button = document.querySelector("button");
 
+  // Check if elements exist
+  if (!audio || !button) return;
+
   // Restart the audio every time
   audio.currentTime = 0;
-  audio.play();
+  audio.play().catch(() => {
+    // Handle autoplay restrictions gracefully
+    console.log('Audio playback failed - user interaction may be required');
+  });
 
   // Disable button briefly to prevent spamming
   button.disabled = true;
