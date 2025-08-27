@@ -2,40 +2,53 @@
 <html lang="en">
 
 <head>
+  <!-- Basic page setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A special birthday card for Connie with music and confetti">
   <title>Connie's Birthday Card</title>
+  
+  <!-- Cake emoji favicon for browser tab -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Google Font -->
+  
+  <!-- Google Fonts: Pacifico for headings, Inter for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <!-- Main container centers the card on the page -->
   <div class="container">
+    <!-- The birthday card itself -->
     <div class="card">
+      <!-- Main birthday message -->
       <h1>Happy Birthday, Connie!</h1>
       
-      <!-- Connie's photo -->
+      <!-- Birthday photo with hover effects -->
       <img src="Images/connie-birthday.JPG" alt="Connie smiling" class="birthday-photo" />
       
+      <!-- Personal message -->
       <p>Wishing you a day filled with love, joy, and all your favorite things.</p>
       <p>I love you,</p>
       <p>Miguel Urena</p>
+      
+      <!-- Interactive button that triggers celebration -->
       <button onclick="celebrate()" aria-label="Play birthday song and show confetti">Celebrate!</button>
     </div>
   </div>
 
-  <!-- Background canvas for confetti -->
+  <!-- Canvas element for confetti animation (not visible but needed) -->
   <canvas id="confetti-canvas"></canvas>
 
-  <!-- Audio for birthday song -->
+  <!-- Hidden audio element for birthday song -->
   <audio id="birthdaySong" src="audio/happy-birthday-220024.mp3" preload="auto"></audio>
 
-  <!-- Canvas Confetti library -->
+  <!-- External library for confetti effects -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <!-- Your external JS file -->
+  
+  <!-- Your custom JavaScript for interactions -->
   <script src="script.js"></script>
 </body>
 

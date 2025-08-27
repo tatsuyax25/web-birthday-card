@@ -1,159 +1,174 @@
-/* This is a CSS file for styling a simple webpage */
+/* ===== BIRTHDAY CARD STYLES ===== */
+
+/* Reset default browser styles and use border-box sizing */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Makes padding/border included in width/height */
 }
 
+/* Full-page setup with gradient background */
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Pacifico', cursive, sans-serif;
-  background: linear-gradient(to right, #ff9aeb, #c38bfc);
+  height: 100%; /* Full viewport height */
+  font-family: 'Pacifico', cursive, sans-serif; /* Fun, handwritten-style font */
+  background: linear-gradient(to right, #ff9aeb, #c38bfc); /* Pink to purple gradient */
 }
 
-/* New container to properly center the card */
+/* ===== LAYOUT ===== */
+
+/* Flexbox container to center the card perfectly on screen */
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
-  /* space for small devices */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+  padding: 2rem; /* Space around edges for mobile */
   text-align: center;
 }
 
-/* Birthday Card Container */
+/* ===== MAIN CARD ===== */
+
+/* The birthday card itself */
 .card {
   background-color: #fff;
   padding: 2rem 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Drop shadow for depth */
   max-width: 400px;
   width: 100%;
-  animation: fadeIn 1.5s ease;
-  transition: transform 0.3s ease;
+  animation: fadeIn 1.5s ease; /* Entrance animation */
+  transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
+/* Subtle lift effect when hovering over card */
 .card:hover {
-  transform: translateY(-5px);
-  /* Slightly lift the card on hover */
+  transform: translateY(-5px); /* Move up 5px */
 }
 
-/* Header */
+/* ===== TYPOGRAPHY ===== */
+
+/* Main birthday heading */
 h1 {
-  color: #b44cff;
-  /* bright purple */
+  color: #b44cff; /* Bright purple to match theme */
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  animation: fadeInZoom 1.2s ease-out;
+  animation: fadeInZoom 1.2s ease-out; /* Zoom-in entrance effect */
 }
 
-/* Initial frame style and animation */
+/* ===== PHOTO STYLING ===== */
+
+/* Birthday photo with decorative frame */
 .birthday-photo {
   display: block;
   margin: 20px auto;
   width: 100%;
   max-width: 300px;
-  /* or adjust to fit */
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
   border-radius: 20px;
-  border: 5px solid #d291ff;
+  border: 5px solid #d291ff; /* Purple border */
   padding: 5px;
-  background: linear-gradient(45deg, #ff8ecf, #d291ff);
-  opacity: 0;
-  transform: scale(0.8);
-  animation: fadeInZoom 1.5s forwards;
-  transition: transform 0.3s ease;
+  background: linear-gradient(45deg, #ff8ecf, #d291ff); /* Gradient frame */
+  opacity: 0; /* Start invisible for animation */
+  transform: scale(0.8); /* Start smaller for animation */
+  animation: fadeInZoom 1.5s forwards; /* Fade and zoom in */
+  transition: transform 0.3s ease; /* Smooth hover transitions */
 }
 
+/* Fun hover effect - slight rotation and glow */
 .birthday-photo:hover {
-  transform: scale(1.05) rotate(1deg);
-  box-shadow: 0 8px 25px rgba(178, 76, 255, 0.3);
+  transform: scale(1.05) rotate(1deg); /* Grow and tilt slightly */
+  box-shadow: 0 8px 25px rgba(178, 76, 255, 0.3); /* Purple glow */
 }
 
-/* Paragraph Text */
+/* Message text styling */
 p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif; /* Clean, readable font for body text */
   font-size: 1.2rem;
   margin: 0.5rem 0;
-  color: #6b1e87;
+  color: #6b1e87; /* Rich purple color */
   font-weight: 400;
 }
 
-/* Button Styling */
+/* ===== INTERACTIVE BUTTON ===== */
+
+/* Celebrate button styling */
 button {
   margin-top: 20px;
   padding: 12px 24px;
   font-size: 1rem;
-  background-color: #a044ff;
-  /* vibrant purple */
+  background-color: #a044ff; /* Vibrant purple */
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth animations */
 }
 
+/* Hover effects - darker color, grow, and glow */
 button:hover {
-  background-color: #6b1e87;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(160, 68, 255, 0.5);
+  background-color: #6b1e87; /* Darker purple */
+  transform: scale(1.05); /* Slightly larger */
+  box-shadow: 0 0 20px rgba(160, 68, 255, 0.5); /* Purple glow effect */
 }
 
+/* Click effect - shrink slightly when pressed */
 button:active {
   transform: scale(0.98);
 }
 
-/* Keyframes for fade-in and zoom-in */
+/* ===== ANIMATIONS ===== */
+
+/* Fade in with zoom effect for photo and heading */
 @keyframes fadeInZoom {
   0% {
-    opacity: 0;
-    transform: scale(0.8);
+    opacity: 0; /* Start invisible */
+    transform: scale(0.8); /* Start smaller */
   }
-
   100% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 1; /* End fully visible */
+    transform: scale(1); /* End normal size */
   }
 }
 
+/* Slide up fade-in effect for the card */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 0; /* Start invisible */
+    transform: translateY(30px); /* Start 30px lower */
   }
-
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End in normal position */
   }
 }
 
-/* Mobile Responsiveness */
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+/* Adjustments for small screens (phones) */
 @media (max-width: 480px) {
   .card {
-    width: 90%;
-    padding: 1.5rem;
+    width: 90%; /* Slightly narrower on mobile */
+    padding: 1.5rem; /* Less padding */
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller heading */
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller text */
   }
 
   button {
-    width: 100%;
+    width: 100%; /* Full-width button */
     font-size: 1.1rem;
-    padding: 16px 24px;
-    min-height: 48px;
+    padding: 16px 24px; /* Larger touch target */
+    min-height: 48px; /* Minimum touch target size */
   }
 
   .birthday-photo {
-    max-width: 100%;
-    border-width: 4px;
+    max-width: 100%; /* Full width on mobile */
+    border-width: 4px; /* Thinner border */
   }
 }
